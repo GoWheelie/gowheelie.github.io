@@ -10,4 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }, index * 150);
     });
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      if (window.location.href.includes(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
+  });

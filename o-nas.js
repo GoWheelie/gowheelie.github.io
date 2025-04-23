@@ -49,4 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
       update();
     });
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      if (window.location.href.includes(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
+  });
